@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Crie um algoritmo para ler N números, some-os e faça a média entre os números*/
+
+        const num = parseInt(prompt("Quantos números você quer somar ? "))
+        let todosNumeros = 0
+        let somaNumero = 0
+
+        for (let i = 0; i < num; i++) {
+            somaNumero = parseInt(prompt("Qual número você quer somar ? "))
+            todosNumeros = todosNumeros + somaNumero
+        }
+
+        const media = todosNumeros/num
+
+        alert(" A soma dos números é " + todosNumeros + " e a média é: " + media)
+
+    </script>
+</body>
+</html>

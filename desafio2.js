@@ -17,24 +17,24 @@ Digite G se for gasolina.
 
 if (tipoCombustivel == "A") {
     
-    const litrosCombustivel = parseInt(prompt("Quantos litros de álcool você irá colocar ?"))
+    const litrosCombustivel = parseFloat(prompt("Quantos litros de álcool você irá colocar ?"))
     if (litrosCombustivel <= 25) {
-        const precoAlcool = litrosCombustivel * 1.9 - litrosCombustivel * 0.2
+        const precoAlcool = litrosCombustivel * 1.9 - litrosCombustivel * 0.02
         alert("Você irá pagar " + precoAlcool)
     } else {
-        const precoAlcool = litrosCombustivel * 1.9 - litrosCombustivel * 0.4
+        const precoAlcool = litrosCombustivel * 1.9 - litrosCombustivel * 0.04
         alert("Você irá pagar " + precoAlcool)
     }
 }
 
 if (tipoCombustivel == "G") {
     
-    const litrosCombustivel = parseInt(prompt("Quantos litros de gasolina você irá colocar ?"))
+    const litrosCombustivel = parseFloat(prompt("Quantos litros de gasolina você irá colocar ?"))
     if (litrosCombustivel <= 25) {
-        const precoGasolina = litrosCombustivel * 2.7 - litrosCombustivel * 0.3
+        const precoGasolina = litrosCombustivel * 2.7 - litrosCombustivel * 0.03
         alert("Você irá pagar " + precoGasolina)
     } else {
-        const precoGasolina = litrosCombustivel * 2.7 - litrosCombustivel * 0.5
+        const precoGasolina = litrosCombustivel * 2.7 - litrosCombustivel * 0.05
         alert("Você irá pagar " + precoGasolina)
     }
 }
