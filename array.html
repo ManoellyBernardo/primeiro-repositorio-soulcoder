@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /***
+         * um programa que pergunte quantos produtos um cliente pegou e depois peça para que ele informe
+        o preço de cadaCrie produto. Ao recuperar possuir o valor de cada produto, faça a soma total da compra e
+        informe o maior e o menor preço que foi informado.
+         */
+
+        const quantProdutos = parseInt(prompt("Informe a quantidade produtos: "))
+
+        const precoProdutos = []
+        let soma = 0
+        let valorMin = 10000
+        let valorMax = 0
+
+        for (let i = 0; i < quantProdutos; i++) {
+            precoProdutos[i] = parseFloat(prompt("Qual é o preço do produto ? "))
+
+            if (valorMin > precoProdutos[i]) {
+            valorMin = precoProdutos[i]    
+            }
+
+            if (valorMax < precoProdutos[i]) {
+            valorMax = precoProdutos[i]    
+            }
+
+        }
+
+        /**for (let i = 0; i < quantProdutos; i++) {
+            precoProdutos[i] = parseFloat(prompt("Qual é o preço do produto ? "))
+            const somaPrecos = precoProdutos[i]
+            soma += somaPrecos
+        }*/
+
+        /**for (let i = 0; i < precoProdutos.length; i++) {
+            const somaPrecos = precoProdutos[i]
+            soma = soma + somaPrecos
+        }*/
+
+        for (let preco of precoProdutos){
+            soma += preco
+        }
+
+        alert("A soma dos valores é " + soma)
+        alert("O valor minimo é " + valorMin)
+        alert("O valor máximo é " + valorMax)
+
+    </script>
+</body>
+
+</html>
