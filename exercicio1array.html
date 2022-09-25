@@ -26,13 +26,11 @@
         for (let i = 0; i < 6; i++) {
 
             vetor[i] = parseInt(prompt("Qual valor inteiro você quer inserir no vetor ? "))
-
+            
             if (vetor[i] % 2 == 0) {
                 quantidadeNumPar++
                 vetorNumPar[i] = vetor[i]
-            }
-
-            if (vetor[i] % 2 == 1) {
+            } else {
                 quantidadeNumImpar++
                 vetorNumImpar[i] = vetor[i]
             }
