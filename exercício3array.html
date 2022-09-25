@@ -16,7 +16,12 @@
         const vetor = []
 
         for (let i = 0; i < 20; i++){
-            vetor[i] = parseInt(prompt("Qual valor você quer inserir no vetor ? "))
+            num = parseInt(prompt("Qual valor você quer inserir no vetor ? "))
+            if (vetor.includes(num)) {
+                alert("Número duplicado tente de novo!")
+            } else{
+                vetor[i] = num
+            }
         }
 
     </script>
