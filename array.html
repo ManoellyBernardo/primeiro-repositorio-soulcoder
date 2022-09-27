@@ -24,7 +24,8 @@
         let valorMax = 0
 
         for (let i = 0; i < quantProdutos; i++) {
-            precoProdutos[i] = parseFloat(prompt("Qual é o preço do produto ? "))
+            //precoProdutos[i] = parseFloat(prompt("Qual é o preço do produto ? "))
+            precoProdutos.push(parseFloat(prompt("Qual é o preço do produto ? "))) //usando método push -> que pega um valor e adiciona no final do Array.
 
             if (valorMin > precoProdutos[i]) {
             valorMin = precoProdutos[i]    
