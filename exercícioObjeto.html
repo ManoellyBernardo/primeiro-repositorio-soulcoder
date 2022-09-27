@@ -13,26 +13,39 @@
          * Crie um algortimo que recebe informações de 15 produtos. Cada produto possui nome, marca, uma foto (link de uma imagem da internet), preço unitário e a quantidade de produtos em estoque. Ao receber essas informações dos produtos, imprima no HTML essas informações de cada produto e o produto entre o preço e a quantidade de produtos em estoque (preço total).
         */
 
-        produto = {}
+        produto = {
+            nome:" ",
+            marca: " ",
+            imagem: " ",
+            preco: 0,
+            quantEstoque: 0
+        }
+        let produtos = []
+        let precoTotal = []
 
-        for (let i = 1; i <= 15; i++) {
-            produto.nome = prompt("Escreva qual é o nome do " + i + "° produto ?")
-            document.write("O nome do " + i + "° produto é: " + produto.nome)
+        for (let i = 0; i < 15; i++) {
+            produto.nome = prompt("Escreva qual é o nome do " + (i+1) + "° produto ?")
             
-            produto.marca = prompt("Escreva qual é a marca do " + i + "° produto ?")
-            document.write("A marca do " + i + "° produto é: " + produto.marca)
+            produto.marca = prompt("Escreva qual é a marca do " + (i+1) + "° produto ?")
             
-            produto.imagem = prompt("Insira o link da imagem do " + i + "° produto:")
-            document.write("o link da imagem do " + i + "° produto é: " + produto.imagem)
+            produto.imagem = prompt("Insira o link da imagem do " + (i+1) + "° produto:")
             
-            produto.preco = parseFloat(prompt("Escreva qual é o preço deste " + i + "° produto ?"))
-            document.write("o preço deste " + i + "° produto é " + produto.preco)
+            produto.preco = parseFloat(prompt("Escreva qual é o preço deste " + (i+1) + "° produto ?"))
             
-            produto.quantEstoque = parseInt(prompt("Escreva qual é a quantidade que está no estoque do " + i + "° produto: "))
-            document.write("A quantidade que está no estoque do " + i + "° produto é: " + produto.quantEstoque)
+            produto.quantEstoque = parseInt(prompt("Escreva qual é a quantidade que está no estoque do " + (i+1) + "° produto: "))
             
-            let prod = (produto.preco * produto.quantEstoque)
-            document.write("O produto entre o preço e a quantidade de produtos em estoque é: " + prod)
+            precoTotal.push(produto.preco * produto.quantEstoque)
+
+            produtos.push(produto)
+        }
+
+        for (let i = 0; i < produtos.length; i++) {
+            document.write("<br>Produto: " + produtos[i].nome)
+            document.write("<br>Marca: " + produtos[i].marca)
+            document.write(`<br>Link da imagem: <img src='${produtos[i].imagem}' width='200'>`)
+            document.write("<br>Preço: " + produtos[i].preco)
+            document.write("<br>Quantidade no estoque: " + produtos[i].quantEstoque)
+            document.write("<br>O preço total desses produtos no estoque é: " + precoTotal[i])
         }
 
     </script>
