@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      /**
+* Criem uma função que gera o resultado de uma equação do segundo grau
+* ax² + bx + c = 0
+* delta = b² - 4ac
+* b = -b +- raíz de delta / 2a
+*/
+
+      let a = parseInt(prompt("Digite o valor de a: "))
+      let b = parseInt(prompt("Digite o valor de b: "))
+      let c = parseInt(prompt("Digite o valor de c: "))
+
+      //Primeiro se calcula delta:
+
+      function delta(b, a, c) {
+         let d = (b * b) - 4 * a * c
+         return d
+      }
+
+
+      function bhaskaraP(b, d, a) {
+         let X1 = (- b + Math.sqrt(d)) / (2 * a)
+         return X1
+      }
+
+      function bhaskaraN(b, d, a) {
+         let X2 = (- b - Math.sqrt(d)) / (2 * a)
+         return X2
+      }
+
+      alert("O valor de delta é: " + delta(b, a, c))
+      alert("O x positivo é: " + bhaskaraP(b, delta(b, a, c), a))
+      alert("O x negativo é: " + bhaskaraN(b, delta(b, a, c), a))
+
+      /**
+       * Resolução professor:
+       * 
+       * function resultado (a, b, c) {  
+
+         const delta = Math.pow (b,2) -4 * a * c //ou (b ** 2) - 4 * a * cs
+         const raizDelta = Math.sqrt(delta)   
+         const x1 = (b + raizDelta) / (2 * a)
+         const x2 = (b - raizDelta) / (2 * a)
+         return [ x1, x2]
+      } 
+         console.log(resultado(1, -1, -12))
+      */
+
+   </script>
+</body>
+
+</html>
